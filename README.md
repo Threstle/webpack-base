@@ -1,4 +1,4 @@
-# CPU Monitoring app
+# Webpack-base
 
 ## About
 
