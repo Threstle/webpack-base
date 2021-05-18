@@ -6,7 +6,7 @@ Barebone base for React projects using weback.
 
 ## Installation
 
-Install dependancies 
+Install dependencies 
 
 
 ```shell script
@@ -18,13 +18,13 @@ $ npm i
 Build
 
 ```shell script
-$ npx webpack
+$ npm run build
 ```
 
 Build and watch
 
 ```shell script
-$ npx webpack --watch
+$ npm run dev
 ```
 
 
