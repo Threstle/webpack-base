@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import './App.less';
+import './app.less';
 
 interface IProps {}
 
