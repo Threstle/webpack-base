@@ -57,6 +57,18 @@ module.exports = {
                     name: '[path][name].[ext]'
                 }
             },
+            {
+                test: /\.mp4$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "video"
+                        }
+                    }
+                ]
+            },
             // Images
             {
                 test: /\.(jpg|png|gif|svg)$/,
@@ -73,25 +85,25 @@ module.exports = {
             },
             // Fonts
             {
-                test: /\.(ttf|eot|woff|woff2)$/,
-                use:
-                [
-                    {
-                        loader: 'file-loader',
-                        options:
-                        {
-                            outputPath: 'assets/fonts/'
-                        }
+                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: 'assets/fonts/'
                     }
+                  }
                 ]
-            },
+              },
 
             // Shaders
             {
-                test: /\.(glsl|vs|fs|vert|frag)$/,
+                test: /\.(glsl|vs|fs|vert|frag|txt)$/,
                 exclude: /node_modules/,
                 use: [
-                    'raw-loader'
+                    'raw-loader',
+                    'glslify-loader'
                 ]
             },
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
