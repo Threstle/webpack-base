@@ -1,14 +1,14 @@
-import React, {useEffect, useRef, useState} from "react";
-import './app.less';
+import React, { useEffect, useRef, useState } from "react";
+import './HomePage.less';
 
-interface IProps {}
+interface IProps { }
 
-const componentName = "App";
+const componentName = "HomePage";
 
 /**
  * @name HomePage
  */
-function App (props: IProps) {
+function HomePage(props: IProps) {
 
     // get root ref
     const rootRef = useRef<HTMLDivElement>(null);
@@ -16,13 +16,11 @@ function App (props: IProps) {
 
     // -------------------–-------------------–-------------------–--------------- REGISTER PAGE
 
-
-
     // -------------------–-------------------–-------------------–--------------- RENDER
 
     return <div className={componentName} ref={rootRef}>
-        <h1>Webpack base</h1>
+        <h1>HomePage</h1>
     </div>;
 };
 
-export default App;
+export default HomePage;
