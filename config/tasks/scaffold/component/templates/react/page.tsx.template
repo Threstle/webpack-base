@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef,forwardRef} from 'react';
 import './%%upperComponentName%%.less';
 
 interface IProps {
@@ -10,7 +10,7 @@ const componentName = "%%upperComponentName%%";
 /**
  * @name %%upperComponentName%%
  */
-function %%upperComponentName%% (props: IProps) {
+const %%upperComponentName%% = forwardRef((props: IProps)=> {
 
   // get root ref
   const rootRef = useRef<HTMLDivElement>(null);
@@ -18,6 +18,6 @@ function %%upperComponentName%% (props: IProps) {
   return <div ref={rootRef} className={componentName}>
       {componentName}
   </div>
-}
+});
 
 export default %%upperComponentName%%

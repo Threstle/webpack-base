@@ -8,7 +8,7 @@ const componentName = "HomePage";
 /**
  * @name HomePage
  */
-const HomePage = forwardRef((props: IProps) {
+const HomePage = forwardRef((props: IProps) =>{
 
     // get root ref
     const rootRef = useRef<HTMLDivElement>(null);

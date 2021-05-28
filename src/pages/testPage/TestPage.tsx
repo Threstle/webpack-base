@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {forwardRef, useRef} from 'react';
 import './TestPage.less';
 
 interface IProps {
@@ -10,7 +10,7 @@ const componentName = "TestPage";
 /**
  * @name TestPage
  */
-function TestPage (props: IProps) {
+const TestPage = forwardRef((props: IProps)=> {
 
   // get root ref
   const rootRef = useRef<HTMLDivElement>(null);
@@ -18,6 +18,6 @@ function TestPage (props: IProps) {
   return <div ref={rootRef} className={componentName}>
       {componentName}
   </div>
-}
+});
 
 export default TestPage
