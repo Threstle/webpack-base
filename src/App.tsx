@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Router, Link, Stack } from "@cher-ami/router";
 import HomePage from "./pages/homePage/HomePage";
 
@@ -11,9 +11,15 @@ const routesList = [
 
 function App() {
   return (
-    <div>
-        <HomePage/>
-    </div>
+    <Router routes={routesList} base={"/"}>
+      <Fragment>
+      <nav>
+        <Link to={"/"} />
+        <Link to={"/foo"} />
+      </nav>
+      <Stack />
+      </Fragment>
+    </Router>
   );
 }
 

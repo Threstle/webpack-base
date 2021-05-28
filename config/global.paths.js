@@ -1,6 +1,15 @@
 const root = require("app-root-path")
 
 module.exports = {
+  /**
+   * root
+   */
+  root: root.resolve(""),
+
+  /**
+   * src
+   */
+  src: root.resolve("src"),
 
   /**
    * dist

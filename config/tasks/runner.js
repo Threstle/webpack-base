@@ -1,3 +1,5 @@
+// Runner and scaffolder tasks from https://github.com/cher-ami/webpack-base
+
 const { CLICommands } = require("@solid-js/cli")
 const { Files } = require("@zouloux/files")
 Files.setVerbose(false)
